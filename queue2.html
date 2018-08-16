@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Queuetrial.js"></script>
+  </head>
+  <body>
+    <p id="fifo"></p>
+    <p id="print"></p>
+    <p id="first"></p>
+    <p id="last"></p>
+    <p id="removed"></p>
+    <p id="print2"></p>
+  </body>
+  <script>
+   $(document).ready(function(){
+    $("#fifo").html("queue follows FIFO principle");
+    var myqueue = new Queue();
+    myqueue.Enqueue(3287);
+    myqueue.Enqueue(3829);
+    myqueue.Enqueue(123);
+    myqueue.Enqueue(77777);
+    myqueue.Enqueue(8959);
+    myqueue.Enqueue(10);
+    myqueue.Enqueue(456);
+    myqueue.Printqueue();
+    myqueue.Dequeue();
+    myqueue.Printqueue2();
+  });
+  </script>
+</html>
